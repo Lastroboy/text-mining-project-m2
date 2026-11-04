@@ -1,0 +1,20 @@
+# Python 3.11 ou plus récent (exigé par pandas 3)
+#
+# Installation, depuis le dossier du projet :
+#   python -m venv .venv
+#   .venv\Scripts\activate          (Windows)   |   source .venv/bin/activate   (Mac/Linux)
+#   pip install -r requirements.txt
+# Puis : jupyter notebook   (ou choisir le noyau .venv dans VS Code)
+
+pandas>=3.0,<4                  # lecture du .csv.gz, DataFrames
+pyarrow>=15                     # lecture et écriture des fichiers .parquet
+emoji>=2.16,<3                  # noms français des émojis (language='fr')
+lingua-language-detector>=2.1   # détection de langue (étape B)
+spacy>=3.8,<3.9                 # lemmatisation, catégories grammaticales, entités nommées (étape C)
+scikit-learn>=1.5               # TF-IDF, modèles, validation croisée (étapes D et E)
+matplotlib>=3.8                 # graphiques
+notebook>=7                     # ouvrir les notebooks dans le navigateur
+ipykernel>=6                    # noyau Python pour Jupyter et VS Code
+
+# modèle français de spaCy (équivaut à : python -m spacy download fr_core_news_md)
+fr_core_news_md @ https://github.com/explosion/spacy-models/releases/download/fr_core_news_md-3.8.0/fr_core_news_md-3.8.0-py3-none-any.whl
