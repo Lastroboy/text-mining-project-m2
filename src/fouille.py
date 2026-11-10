@@ -19,7 +19,7 @@ def evaluer(X, y, modele, ngrammes=(1, 2)):
 
 
 def mots_associes(pipe, n=15):
-    """Termes aux coefficients les plus forts de la régression logistique, pour chaque classe."""
+    """Termes aux coefficients les plus forts du modèle linéaire (SVM linéaire ici), pour chaque classe."""
     tfidf, modele = pipe[0], pipe[-1]
     coefs = pd.Series(modele.coef_[0], index=tfidf.get_feature_names_out()).sort_values()
     return pd.DataFrame({

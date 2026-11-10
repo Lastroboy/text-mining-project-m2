@@ -1,0 +1,60 @@
+/* Mise en page du rapport (utilisée par l'extension VS Code "Markdown PDF") */
+
+@page { size: A4; margin: 2cm 2.2cm; }
+
+body {
+  font-family: "Segoe UI", Calibri, Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.55;
+  color: #222;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page de garde : le titre, puis les deux lignes qui le suivent */
+h1 {
+  margin-top: 8cm;
+  font-size: 26pt;
+  line-height: 1.25;
+  color: #1f3864;
+  text-align: center;
+  border: none;
+}
+h1 + p { margin-top: 1.5cm; text-align: center; font-size: 13pt; color: #555; }
+h1 + p + p { text-align: center; font-size: 12pt; }
+
+/* Grandes parties : à la suite les unes des autres, sauf la première qui suit la page de garde */
+h2:first-of-type { page-break-before: always; margin-top: 0; }
+h2 {
+  margin-top: 24pt;
+  padding-bottom: 4pt;
+  font-size: 17pt;
+  color: #1f3864;
+  border-bottom: 2px solid #1f3864;
+}
+h3 { margin-top: 16pt; font-size: 12.5pt; color: #2e5597; }
+h2, h3 { page-break-after: avoid; text-align: left; }
+
+/* Les séparateurs "---" du Markdown ne servent plus : les parties changent de page */
+hr { display: none; }
+
+p { margin: 6pt 0; }
+ul { margin: 4pt 0; padding-left: 18pt; }
+li { margin: 2pt 0; }
+
+/* Tableaux */
+table {
+  width: 100%;
+  margin: 10pt 0;
+  border-collapse: collapse;
+  font-size: 9.5pt;
+  text-align: left;
+  page-break-inside: avoid;
+}
+th { background: #1f3864; color: #fff; padding: 5pt 7pt; text-align: left; }
+td { padding: 4pt 7pt; border-bottom: 1px solid #d0d7e5; }
+tr:nth-child(even) td { background: #f3f6fb; }
+
+img { display: block; max-width: 100%; margin: 10pt auto; }
+code { font-family: Consolas, monospace; font-size: 9.5pt; background: #f2f2f2; padding: 0 3pt; }

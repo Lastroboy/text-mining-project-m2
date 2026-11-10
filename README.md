@@ -34,9 +34,9 @@ dans `data/processed/`.
 |---|---|---|
 | `01_nettoyage.ipynb` | A. Nettoyage par regex (HTML, URL, émojis, typographie) | `reviews_clean.parquet` |
 | `02_filtrage.ipynb` | B. Filtrage (doublons, longueur, français) et jointure avec les logements | `reviews_fr.parquet` |
-| `03_prétraitements_linguistique.ipynb` | C. spaCy : lemmes, mots vides sur mesure, négation, prénoms, filtre grammatical (≈ 20 min) | `reviews_ablation.parquet` |
-| `04_représentation_vectorielle.ipynb` | D. Un document par logement, étiquettes, représentation TF-IDF | `logements.parquet` |
-| `05_Méthode_de_fouille.ipynb` | E. Classification, étude d'ablation, analyse | `resultats/*.csv` |
+| `03_pretraitements_linguistiques.ipynb` | C. spaCy : lemmes, mots vides sur mesure, négation, prénoms, filtre grammatical (≈ 20 min) | `reviews_ablation.parquet` |
+| `04_representation_vectorielle.ipynb` | D. Un document par logement, étiquettes, représentation TF-IDF | `logements.parquet` |
+| `05_methode_de_fouille.ipynb` | E. Classification, étude d'ablation, analyse | `resultats/*.csv` |
 
 Les fonctions utilisées par les notebooks sont dans `src/`. Après une modification d'un fichier de `src/`,
 redémarrer le noyau du notebook.

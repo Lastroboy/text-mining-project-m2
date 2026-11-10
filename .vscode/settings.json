@@ -1,0 +1,13 @@
+{
+    "markdown-pdf.styles": ["rapport.css"],
+    "markdown-pdf.includeDefaultStyles": false,
+    "markdown-pdf.highlight": false,
+    "markdown-pdf.format": "A4",
+    "markdown-pdf.margin.top": "2cm",
+    "markdown-pdf.margin.bottom": "2cm",
+    "markdown-pdf.margin.left": "2.2cm",
+    "markdown-pdf.margin.right": "2.2cm",
+    "markdown-pdf.displayHeaderFooter": true,
+    "markdown-pdf.headerTemplate": "<div></div>",
+    "markdown-pdf.footerTemplate": "<div style=\"width: 100%; font-size: 9px; color: #888; text-align: center;\"><span class=\"pageNumber\"></span> / <span class=\"totalPages\"></span></div>"
+}
